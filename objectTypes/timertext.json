@@ -1,0 +1,20 @@
+{
+	"name": "TimerText",
+	"plugin-id": "Text",
+	"sid": 246791307663277,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Timer",
+			"name": "Minuteur",
+			"sid": 718147885208574
+		},
+		{
+			"behaviorId": "Anchor",
+			"name": "Ancre",
+			"sid": 417603432618495
+		}
+	],
+	"effectTypes": []
+}

@@ -1,0 +1,15 @@
+{
+	"name": "KilledText",
+	"plugin-id": "Text",
+	"sid": 451882233818445,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Ancre",
+			"sid": 467364305235878
+		}
+	],
+	"effectTypes": []
+}

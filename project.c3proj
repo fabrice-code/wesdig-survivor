@@ -1,0 +1,400 @@
+{
+	"projectFormatVersion": 1,
+	"savedWithRelease": 30802,
+	"name": "WesdigSurvivor",
+	"runtime": "c3",
+	"useWorker": "auto",
+	"bundleAddons": false,
+	"usedAddons": [
+		{
+			"type": "plugin",
+			"id": "Sprite",
+			"name": "Sprite",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Keyboard",
+			"name": "Clavier",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "TiledBg",
+			"name": "Arrière-plan Répété",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Souris",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "progressbar",
+			"name": "Barre de progression",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Text",
+			"name": "Texte",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Button",
+			"name": "Bouton",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Audio",
+			"name": "Audio",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Camera3D",
+			"name": "Caméra 3D",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "scrollto",
+			"name": "Défiler vers",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "EightDir",
+			"name": "8 Directions",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "MoveTo",
+			"name": "Déplacer vers",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Projectile",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "destroy",
+			"name": "Détruire hors de la scène",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Anchor",
+			"name": "Ancre",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Timer",
+			"name": "Minuteur",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fondu",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "solid",
+			"name": "Solide",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		}
+	],
+	"uniqueId": "4akisn7f03k",
+	"objectTypes": {
+		"items": [
+			"PlayerSprite",
+			"Clavier",
+			"ArrièreplanRépété",
+			"ZombieEnemySprite",
+			"BulletNormal",
+			"Souris",
+			"BarreDeProgression",
+			"LevelText",
+			"TimerText",
+			"ReplayButton",
+			"GameOverText",
+			"GameOverShadow",
+			"KilledText",
+			"Sprite5",
+			"Sprite7",
+			"Sprite4",
+			"BulletLeft",
+			"BulletRight",
+			"TripleShotButton",
+			"ContinueBouton",
+			"Sprite",
+			"Sprite3",
+			"ZombieBossEnemySprite",
+			"Audio",
+			"RobotEnemySprite",
+			"VictoryText",
+			"VictoryScoreText",
+			"Sprite2",
+			"Caméra3D",
+			"Sprite6",
+			"Sprite8",
+			"Bouton",
+			"Sprite9",
+			"Sprite10",
+			"Sprite11",
+			"Sprite12"
+		],
+		"subfolders": []
+	},
+	"autosaveData": null,
+	"containers": [],
+	"families": {
+		"items": [],
+		"subfolders": []
+	},
+	"layouts": {
+		"items": [
+			"Level1",
+			"MainMenu"
+		],
+		"subfolders": []
+	},
+	"eventSheets": {
+		"items": [
+			"LevelEvent",
+			"MainMenuEvent"
+		],
+		"subfolders": []
+	},
+	"rootFileFolders": {
+		"script": {
+			"items": [],
+			"subfolders": []
+		},
+		"sound": {
+			"items": [
+				{
+					"name": "arrow_shot.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 828926299514400,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "zombie_die.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 370210995956387,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "zombie_boss_die.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 670738112035677,
+					"file-info": {
+						"purpose": "none"
+					}
+				},
+				{
+					"name": "robot_boss_die.webm",
+					"type": "audio/webm; codecs=opus",
+					"sid": 786325258365806,
+					"file-info": {
+						"purpose": "none"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"music": {
+			"items": [],
+			"subfolders": []
+		},
+		"video": {
+			"items": [],
+			"subfolders": []
+		},
+		"font": {
+			"items": [],
+			"subfolders": []
+		},
+		"icon": {
+			"items": [
+				{
+					"name": "Icône-16.png",
+					"type": "image/png",
+					"sid": 354154394394371,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Icône-32.png",
+					"type": "image/png",
+					"sid": 749780591281045,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Icône-64.png",
+					"type": "image/png",
+					"sid": 430290022838781,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Icône-128.png",
+					"type": "image/png",
+					"sid": 719914434526328,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Icône-256.png",
+					"type": "image/png",
+					"sid": 637124327098846,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "Icône-512.png",
+					"type": "image/png",
+					"sid": 999882208596850,
+					"icon-info": {
+						"purpose": "app-icon"
+					}
+				},
+				{
+					"name": "logo-chargement.png",
+					"type": "image/png",
+					"sid": 961110078322756,
+					"icon-info": {
+						"purpose": "loading-logo"
+					}
+				}
+			],
+			"subfolders": []
+		},
+		"general": {
+			"items": [],
+			"subfolders": []
+		}
+	},
+	"timelines": {
+		"items": [
+			"Timeline 1"
+		],
+		"subfolders": [
+			{
+				"items": [],
+				"subfolders": []
+			}
+		]
+	},
+	"properties": {
+		"description": "",
+		"version": "1.0.0.0",
+		"author": "",
+		"authorEmail": "",
+		"authorWebsite": "",
+		"appId": "",
+		"pixelRounding": false,
+		"zAxisScale": "normalized",
+		"fov": 0.7853981633974483,
+		"useLoaderLayout": false,
+		"fullscreenMode": "letterbox-scale",
+		"fullscreenQuality": "high",
+		"viewportFit": "auto",
+		"backgroundColor": [
+			0,
+			0,
+			0,
+			0
+		],
+		"splashColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"useThemeColor": false,
+		"themeColor": [
+			1,
+			1,
+			1,
+			0
+		],
+		"orientations": "landscape",
+		"webgpu": "auto",
+		"gpuPreference": "high-performance",
+		"scriptsType": "module",
+		"framerateMode": "vsync",
+		"compositingMode": "standard",
+		"sampling": "trilinear",
+		"downscaling": "medium",
+		"renderingMode": "auto",
+		"anisotropicFiltering": "auto",
+		"maxSpriteSheetSize": 2048,
+		"loaderStyle": "splash",
+		"preloadSounds": true,
+		"cordovaiOSScheme": "app",
+		"cordovaAndroidScheme": "https",
+		"autoReloadScriptsOnPreview": false
+	},
+	"viewportWidth": 896,
+	"viewportHeight": 480,
+	"firstLayout": null
+}

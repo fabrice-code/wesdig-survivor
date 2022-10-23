@@ -1,0 +1,62 @@
+{
+	"name": "BulletNormal",
+	"plugin-id": "Sprite",
+	"sid": 249033053420283,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Projectile",
+			"sid": 461514594396290
+		},
+		{
+			"behaviorId": "destroy",
+			"name": "DétruireHorsDeLaScène",
+			"sid": 759803540246221
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 48,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 5596090,
+						"collisionPoly": {
+							"points": [
+								0.75,
+								0.25,
+								1,
+								0.5078125,
+								0.7421875,
+								0.7421875,
+								0.015625,
+								0.6640625,
+								0.0234375,
+								0.328125
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 676313935865249,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

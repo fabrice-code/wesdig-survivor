@@ -1,0 +1,1710 @@
+{
+	"name": "LevelEvent",
+	"events": [
+		{
+			"eventType": "variable",
+			"name": "KilledCount",
+			"type": "number",
+			"initialValue": "0",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 899222053599009
+		},
+		{
+			"eventType": "variable",
+			"name": "TripleShot",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 619820464738005
+		},
+		{
+			"eventType": "variable",
+			"name": "Level",
+			"type": "number",
+			"initialValue": "1",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 558449213224967
+		},
+		{
+			"eventType": "variable",
+			"name": "IsSelectingLevel",
+			"type": "boolean",
+			"initialValue": "false",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 984488907219024
+		},
+		{
+			"eventType": "variable",
+			"name": "MinimumSpawnRange",
+			"type": "number",
+			"initialValue": "800",
+			"comment": "",
+			"isStatic": false,
+			"isConstant": false,
+			"sid": 419804189286846
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-start-of-layout",
+					"objectClass": "System",
+					"sid": 719508716989327
+				}
+			],
+			"actions": [
+				{
+					"id": "set-layer-scale",
+					"objectClass": "System",
+					"sid": 672467425596977,
+					"parameters": {
+						"layer": "0",
+						"scale": "0.3"
+					}
+				},
+				{
+					"id": "start-timer",
+					"objectClass": "TimerText",
+					"sid": 528808130437252,
+					"behaviorType": "Minuteur",
+					"parameters": {
+						"duration": "300",
+						"type": "once",
+						"tag": "\"level-timer\""
+					}
+				}
+			],
+			"sid": 785903953654816
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "PlayerSprite",
+					"sid": 517876351426772,
+					"behaviorType": "8Directions"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "PlayerSprite",
+					"sid": 658829403821775,
+					"parameters": {
+						"animation": "\"Run\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 254220102404565
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "PlayerSprite",
+					"sid": 815212874402626,
+					"behaviorType": "8Directions",
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "PlayerSprite",
+					"sid": 278779601860133,
+					"parameters": {
+						"animation": "\"Stand\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 185932259564621
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Clavier",
+					"sid": 242161596134328,
+					"parameters": {
+						"key": 39
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "PlayerSprite",
+					"sid": 561565279628156,
+					"parameters": {
+						"state": "not-mirrored"
+					}
+				}
+			],
+			"sid": 381121875898888
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-key-pressed",
+					"objectClass": "Clavier",
+					"sid": 515588992648460,
+					"parameters": {
+						"key": 37
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-mirrored",
+					"objectClass": "PlayerSprite",
+					"sid": 376257776938212,
+					"parameters": {
+						"state": "mirrored"
+					}
+				}
+			],
+			"sid": 549460381035635
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 240079136850715,
+					"parameters": {
+						"interval-seconds": "8"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 866932548745198,
+					"parameters": {
+						"object-to-create": "ZombieBossEnemySprite",
+						"layer": "0",
+						"x": "PlayerSprite.X + 1800 * cos(random(360))",
+						"y": "PlayerSprite.Y + 1800 * sin(random(360))",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 545783996357483
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 530605762984071,
+					"parameters": {
+						"interval-seconds": "30"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 997216006385990,
+					"parameters": {
+						"object-to-create": "RobotEnemySprite",
+						"layer": "0",
+						"x": "PlayerSprite.X + 1800 * cos(random(360))",
+						"y": "PlayerSprite.Y + 1800 * sin(random(360))",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 837701478585406
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 695409522731365,
+					"parameters": {
+						"interval-seconds": "random(0.5, 1.5)"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 974124791450209,
+					"parameters": {
+						"object-to-create": "ZombieEnemySprite",
+						"layer": "0",
+						"x": "PlayerSprite.X + random(MinimumSpawnRange, 1800) * cos(random(360))",
+						"y": "PlayerSprite.Y + random(MinimumSpawnRange, 1800) * sin(random(360))",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 315515438027031
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 163234142910307,
+					"parameters": {
+						"interval-seconds": "5"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 269810342845634,
+					"parameters": {
+						"object-to-create": "ZombieEnemySprite",
+						"layer": "0",
+						"x": "PlayerSprite.X + random(MinimumSpawnRange, 1800) * cos(random(360))",
+						"y": "PlayerSprite.Y + random(MinimumSpawnRange, 1800) * sin(random(360))",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 399764958392424,
+					"parameters": {
+						"object-to-create": "ZombieEnemySprite",
+						"layer": "0",
+						"x": "PlayerSprite.X + random(MinimumSpawnRange, 1800) * cos(random(360))",
+						"y": "PlayerSprite.Y + random(MinimumSpawnRange, 1800) * sin(random(360))",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				},
+				{
+					"id": "create-object",
+					"objectClass": "System",
+					"sid": 948986187664343,
+					"parameters": {
+						"object-to-create": "ZombieEnemySprite",
+						"layer": "0",
+						"x": "PlayerSprite.X + random(MinimumSpawnRange, 1800) * cos(random(360))",
+						"y": "PlayerSprite.Y + random(MinimumSpawnRange, 1800) * sin(random(360))",
+						"create-hierarchy": false,
+						"template-name": "\"\""
+					}
+				}
+			],
+			"sid": 341997310951541
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-x-seconds",
+					"objectClass": "System",
+					"sid": 580442737075789,
+					"parameters": {
+						"interval-seconds": "120"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "PlayerSprite",
+					"sid": 360753027934376
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "VictoryText",
+					"sid": 946376023999615,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "VictoryScoreText",
+					"sid": 326257072462343,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "VictoryScoreText",
+					"sid": 890018239161304,
+					"parameters": {
+						"text": "KilledCount & \" killed enemies\""
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "ReplayButton",
+					"sid": 551014533086461,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "GameOverShadow",
+					"sid": 445617921388815,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "GameOverShadow",
+					"sid": 797419871236439,
+					"behaviorType": "Fondu"
+				},
+				{
+					"id": "stop-timer",
+					"objectClass": "TimerText",
+					"sid": 798084513581137,
+					"behaviorType": "Minuteur",
+					"parameters": {
+						"tag": "\"level-timer\""
+					}
+				}
+			],
+			"sid": 122913378632314
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "ZombieEnemySprite",
+					"sid": 887799802661565
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "ZombieEnemySprite",
+					"sid": 195187156535538,
+					"parameters": {
+						"animation": "\"Run\"",
+						"from": "beginning"
+					}
+				}
+			],
+			"sid": 516636415608580
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "ZombieBossEnemySprite",
+					"sid": 293203256032833
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "ZombieBossEnemySprite",
+					"sid": 742734688115029,
+					"parameters": {
+						"animation": "\"Run\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "ZombieBossEnemySprite",
+					"sid": 742194123539392,
+					"parameters": {
+						"instance-variable": "Life",
+						"value": "5"
+					}
+				}
+			],
+			"sid": 127575773201232
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "RobotEnemySprite",
+					"sid": 758156213299425
+				}
+			],
+			"actions": [
+				{
+					"id": "set-animation",
+					"objectClass": "RobotEnemySprite",
+					"sid": 255130540541170,
+					"parameters": {
+						"animation": "\"Run\"",
+						"from": "beginning"
+					}
+				},
+				{
+					"id": "set-instvar-value",
+					"objectClass": "RobotEnemySprite",
+					"sid": 763357415798651,
+					"parameters": {
+						"instance-variable": "Life",
+						"value": "20"
+					}
+				}
+			],
+			"sid": 503577323189699
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "every-tick",
+					"objectClass": "System",
+					"sid": 625545759102468
+				}
+			],
+			"actions": [
+				{
+					"id": "move-to-object",
+					"objectClass": "ZombieEnemySprite",
+					"sid": 768976956219564,
+					"behaviorType": "DéplacerVers",
+					"parameters": {
+						"object": "PlayerSprite",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "ZombieBossEnemySprite",
+					"sid": 556338780270508,
+					"behaviorType": "DéplacerVers",
+					"parameters": {
+						"object": "PlayerSprite",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "move-to-object",
+					"objectClass": "RobotEnemySprite",
+					"sid": 974193133130855,
+					"behaviorType": "DéplacerVers",
+					"parameters": {
+						"object": "PlayerSprite",
+						"image-point": "0",
+						"mode": "direct"
+					}
+				},
+				{
+					"id": "set-progress",
+					"objectClass": "BarreDeProgression",
+					"sid": 797630946942044,
+					"parameters": {
+						"value": "BarreDeProgression.Experience"
+					}
+				},
+				{
+					"id": "set-tooltip",
+					"objectClass": "BarreDeProgression",
+					"sid": 537408909977929,
+					"parameters": {
+						"tooltip": "\"XP \"  & BarreDeProgression.Experience & \" / 100\""
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "LevelText",
+					"sid": 191404122655360,
+					"parameters": {
+						"text": "Level"
+					}
+				},
+				{
+					"id": "set-text",
+					"objectClass": "KilledText",
+					"sid": 707480991121359,
+					"parameters": {
+						"text": "KilledCount"
+					}
+				}
+			],
+			"sid": 569294131647071,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-two-values",
+							"objectClass": "System",
+							"sid": 789613509586078,
+							"parameters": {
+								"first-value": "BarreDeProgression.Experience",
+								"comparison": 5,
+								"second-value": "100"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-instvar-value",
+							"objectClass": "BarreDeProgression",
+							"sid": 963038376904075,
+							"parameters": {
+								"instance-variable": "Experience",
+								"value": "BarreDeProgression.Experience - 100"
+							}
+						},
+						{
+							"id": "add-to-eventvar",
+							"objectClass": "System",
+							"sid": 843481377327749,
+							"parameters": {
+								"variable": "Level",
+								"value": "1"
+							}
+						},
+						{
+							"id": "set-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 582701878674483,
+							"parameters": {
+								"variable": "TripleShot",
+								"value": "true"
+							}
+						}
+					],
+					"sid": 113365436909854
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "is-visible",
+							"objectClass": "PlayerSprite",
+							"sid": 669628328248481
+						}
+					],
+					"actions": [
+						{
+							"id": "set-text",
+							"objectClass": "TimerText",
+							"sid": 321925320356883,
+							"parameters": {
+								"text": "floor(TimerText.Minuteur.TotalTime(\"level-timer\")/60) & \":\" & floor((TimerText.Minuteur.TotalTime(\"level-timer\")%60)/10) & floor(TimerText.Minuteur.TotalTime(\"level-timer\")%10)\n"
+							}
+						}
+					],
+					"sid": 924952857779780
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "ZombieEnemySprite",
+					"sid": 209854274399934,
+					"behaviorType": "DéplacerVers"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "ZombieEnemySprite",
+					"sid": 480224571417242,
+					"parameters": {
+						"angle": "0"
+					}
+				}
+			],
+			"sid": 966151470243468
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "ZombieBossEnemySprite",
+					"sid": 502933025278767,
+					"behaviorType": "DéplacerVers"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "ZombieBossEnemySprite",
+					"sid": 138587153333906,
+					"parameters": {
+						"angle": "0"
+					}
+				}
+			],
+			"sid": 576441978159558
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "is-moving",
+					"objectClass": "RobotEnemySprite",
+					"sid": 659849211835689,
+					"behaviorType": "DéplacerVers"
+				}
+			],
+			"actions": [
+				{
+					"id": "set-angle",
+					"objectClass": "RobotEnemySprite",
+					"sid": 284271341411946,
+					"parameters": {
+						"angle": "0"
+					}
+				}
+			],
+			"sid": 377688632199267
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "ZombieEnemySprite",
+					"sid": 650900491374283,
+					"parameters": {
+						"object": "PlayerSprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "PlayerSprite",
+					"sid": 270105093330132
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "GameOverText",
+					"sid": 164270155763820,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "ReplayButton",
+					"sid": 522050764319920,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "GameOverShadow",
+					"sid": 893554509500477,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "GameOverShadow",
+					"sid": 664521854759430,
+					"behaviorType": "Fondu"
+				},
+				{
+					"id": "stop-timer",
+					"objectClass": "TimerText",
+					"sid": 926412436931022,
+					"behaviorType": "Minuteur",
+					"parameters": {
+						"tag": "\"level-timer\""
+					}
+				}
+			],
+			"sid": 725458438560758
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "ZombieBossEnemySprite",
+					"sid": 787525727849867,
+					"parameters": {
+						"object": "PlayerSprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "PlayerSprite",
+					"sid": 365181446596822
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "GameOverText",
+					"sid": 605855149128356,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "ReplayButton",
+					"sid": 787564152019860,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "GameOverShadow",
+					"sid": 542946594200563,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "GameOverShadow",
+					"sid": 221055058849859,
+					"behaviorType": "Fondu"
+				},
+				{
+					"id": "stop-timer",
+					"objectClass": "TimerText",
+					"sid": 991554137178332,
+					"behaviorType": "Minuteur",
+					"parameters": {
+						"tag": "\"level-timer\""
+					}
+				}
+			],
+			"sid": 876195495923877
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "RobotEnemySprite",
+					"sid": 706143987575390,
+					"parameters": {
+						"object": "PlayerSprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "PlayerSprite",
+					"sid": 400118991315914
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "GameOverText",
+					"sid": 677880288238402,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "ReplayButton",
+					"sid": 437301284581153,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "GameOverShadow",
+					"sid": 250419175192247,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "start-fade",
+					"objectClass": "GameOverShadow",
+					"sid": 587756675712857,
+					"behaviorType": "Fondu"
+				},
+				{
+					"id": "stop-timer",
+					"objectClass": "TimerText",
+					"sid": 323481771546447,
+					"behaviorType": "Minuteur",
+					"parameters": {
+						"tag": "\"level-timer\""
+					}
+				}
+			],
+			"sid": 163064211456453
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-click",
+					"objectClass": "Souris",
+					"sid": 642245816138972,
+					"parameters": {
+						"mouse-button": "left",
+						"click-type": "clicked"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "spawn-another-object",
+					"objectClass": "PlayerSprite",
+					"sid": 655104943837886,
+					"parameters": {
+						"object": "BulletNormal",
+						"layer": "0",
+						"image-point": "0",
+						"create-hierarchy": false
+					}
+				}
+			],
+			"sid": 821847977129932,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "compare-boolean-eventvar",
+							"objectClass": "System",
+							"sid": 804295008759963,
+							"parameters": {
+								"variable": "TripleShot"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "spawn-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 855793821801201,
+							"parameters": {
+								"object": "BulletLeft",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						},
+						{
+							"id": "spawn-another-object",
+							"objectClass": "PlayerSprite",
+							"sid": 816304128539218,
+							"parameters": {
+								"object": "BulletRight",
+								"layer": "0",
+								"image-point": "0",
+								"create-hierarchy": false
+							}
+						}
+					],
+					"sid": 285960933975900
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "BulletNormal",
+					"sid": 468716800457969
+				}
+			],
+			"actions": [
+				{
+					"id": "set-speed",
+					"objectClass": "BulletNormal",
+					"sid": 968085720968243,
+					"behaviorType": "Projectile",
+					"parameters": {
+						"speed": "1500"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "BulletNormal",
+					"sid": 634406797294130,
+					"parameters": {
+						"x": "PlayerSprite.X",
+						"y": "PlayerSprite.Y"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "BulletNormal",
+					"sid": 473220481092377,
+					"parameters": {
+						"angle": "angle(PlayerSprite.X,PlayerSprite.Y, Souris.X, Souris.Y)"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "BulletNormal",
+					"sid": 741498526278124,
+					"behaviorType": "Projectile",
+					"parameters": {
+						"angle": "angle(PlayerSprite.X,PlayerSprite.Y, Souris.X, Souris.Y)"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 597671562499231,
+					"parameters": {
+						"audio-file": "arrow_shot",
+						"loop": "not-looping",
+						"volume": "0",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 103314804481475
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "BulletNormal",
+					"sid": 735313528220193,
+					"parameters": {
+						"object": "ZombieEnemySprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "BulletNormal",
+					"sid": 677347460490928
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ZombieEnemySprite",
+					"sid": 310877576592466
+				}
+			],
+			"sid": 416922793346500
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "BulletLeft",
+					"sid": 296595083961814,
+					"parameters": {
+						"object": "ZombieEnemySprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "BulletLeft",
+					"sid": 892517120238593
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ZombieEnemySprite",
+					"sid": 978974462312285
+				}
+			],
+			"sid": 824222243987104
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "BulletRight",
+					"sid": 408500428692136,
+					"parameters": {
+						"object": "ZombieEnemySprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "BulletRight",
+					"sid": 804147217635833
+				},
+				{
+					"id": "destroy",
+					"objectClass": "ZombieEnemySprite",
+					"sid": 223300190580100
+				}
+			],
+			"sid": 877303572719253
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "BulletNormal",
+					"sid": 332415049006127,
+					"parameters": {
+						"object": "ZombieBossEnemySprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "BulletNormal",
+					"sid": 941168874702133
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "ZombieBossEnemySprite",
+					"sid": 759954276484217,
+					"parameters": {
+						"instance-variable": "Life",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 406917738107094
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "BulletLeft",
+					"sid": 111503477806244,
+					"parameters": {
+						"object": "ZombieBossEnemySprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "BulletLeft",
+					"sid": 871981961925089
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "ZombieBossEnemySprite",
+					"sid": 108073630430390,
+					"parameters": {
+						"instance-variable": "Life",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 681980058668429
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "BulletRight",
+					"sid": 503736179296623,
+					"parameters": {
+						"object": "ZombieBossEnemySprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "BulletRight",
+					"sid": 199650158406886
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "ZombieBossEnemySprite",
+					"sid": 151311635960167,
+					"parameters": {
+						"instance-variable": "Life",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 462628368276495
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "BulletNormal",
+					"sid": 428386256646067,
+					"parameters": {
+						"object": "RobotEnemySprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "BulletNormal",
+					"sid": 100889910477653
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "RobotEnemySprite",
+					"sid": 879809731718714,
+					"parameters": {
+						"instance-variable": "Life",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 977704224946335
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "BulletLeft",
+					"sid": 609495969447767,
+					"parameters": {
+						"object": "RobotEnemySprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "BulletLeft",
+					"sid": 815348339712426
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "RobotEnemySprite",
+					"sid": 499312305414101,
+					"parameters": {
+						"instance-variable": "Life",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 474439694014969
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-collision-with-another-object",
+					"objectClass": "BulletRight",
+					"sid": 920414669020326,
+					"parameters": {
+						"object": "RobotEnemySprite"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "BulletRight",
+					"sid": 260143819568431
+				},
+				{
+					"id": "subtract-from-instvar",
+					"objectClass": "RobotEnemySprite",
+					"sid": 344618893858183,
+					"parameters": {
+						"instance-variable": "Life",
+						"value": "1"
+					}
+				}
+			],
+			"sid": 367256638805292
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "BulletLeft",
+					"sid": 728032757568423
+				}
+			],
+			"actions": [
+				{
+					"id": "set-speed",
+					"objectClass": "BulletLeft",
+					"sid": 952890411340869,
+					"behaviorType": "Projectile",
+					"parameters": {
+						"speed": "1500"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "BulletLeft",
+					"sid": 399815861256976,
+					"parameters": {
+						"x": "PlayerSprite.X",
+						"y": "PlayerSprite.Y"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "BulletLeft",
+					"sid": 281620441910009,
+					"parameters": {
+						"angle": "angle(PlayerSprite.X,PlayerSprite.Y, Souris.X, Souris.Y)-12"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "BulletLeft",
+					"sid": 100815123934707,
+					"behaviorType": "Projectile",
+					"parameters": {
+						"angle": "angle(PlayerSprite.X,PlayerSprite.Y, Souris.X, Souris.Y)-12"
+					}
+				}
+			],
+			"sid": 442948964535066
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-created",
+					"objectClass": "BulletRight",
+					"sid": 437137037866824
+				}
+			],
+			"actions": [
+				{
+					"id": "set-speed",
+					"objectClass": "BulletRight",
+					"sid": 706994481955931,
+					"behaviorType": "Projectile",
+					"parameters": {
+						"speed": "1500"
+					}
+				},
+				{
+					"id": "set-position",
+					"objectClass": "BulletRight",
+					"sid": 774932501940374,
+					"parameters": {
+						"x": "PlayerSprite.X",
+						"y": "PlayerSprite.Y"
+					}
+				},
+				{
+					"id": "set-angle",
+					"objectClass": "BulletRight",
+					"sid": 551935232776133,
+					"parameters": {
+						"angle": "angle(PlayerSprite.X,PlayerSprite.Y, Souris.X, Souris.Y)+12"
+					}
+				},
+				{
+					"id": "set-angle-of-motion",
+					"objectClass": "BulletRight",
+					"sid": 688671400580445,
+					"behaviorType": "Projectile",
+					"parameters": {
+						"angle": "angle(PlayerSprite.X,PlayerSprite.Y, Souris.X, Souris.Y)+12"
+					}
+				}
+			],
+			"sid": 572801512632587
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "ZombieBossEnemySprite",
+					"sid": 226968606424159,
+					"parameters": {
+						"instance-variable": "Life",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "ZombieBossEnemySprite",
+					"sid": 140075682240525
+				}
+			],
+			"sid": 156905139106386
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-instance-variable",
+					"objectClass": "RobotEnemySprite",
+					"sid": 227633483827829,
+					"parameters": {
+						"instance-variable": "Life",
+						"comparison": 3,
+						"value": "0"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "destroy",
+					"objectClass": "RobotEnemySprite",
+					"sid": 252274359729332
+				}
+			],
+			"sid": 970408016472822
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "ZombieEnemySprite",
+					"sid": 111761667407091
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "BarreDeProgression",
+					"sid": 724003898448094,
+					"parameters": {
+						"instance-variable": "Experience",
+						"value": "5"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 374260130062251,
+					"parameters": {
+						"variable": "KilledCount",
+						"value": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 956521824868768,
+					"parameters": {
+						"audio-file": "zombie_die",
+						"loop": "not-looping",
+						"volume": "-20",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 485610391401695
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "ZombieBossEnemySprite",
+					"sid": 643359417078520
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "BarreDeProgression",
+					"sid": 619370180670124,
+					"parameters": {
+						"instance-variable": "Experience",
+						"value": "25"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 868465900656015,
+					"parameters": {
+						"variable": "KilledCount",
+						"value": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 391958724381269,
+					"parameters": {
+						"audio-file": "zombie_boss_die",
+						"loop": "not-looping",
+						"volume": "-20",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 928637468157188
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-destroyed",
+					"objectClass": "RobotEnemySprite",
+					"sid": 458588414417505
+				}
+			],
+			"actions": [
+				{
+					"id": "add-to-instvar",
+					"objectClass": "BarreDeProgression",
+					"sid": 159900118405180,
+					"parameters": {
+						"instance-variable": "Experience",
+						"value": "75"
+					}
+				},
+				{
+					"id": "add-to-eventvar",
+					"objectClass": "System",
+					"sid": 984269784106289,
+					"parameters": {
+						"variable": "KilledCount",
+						"value": "1"
+					}
+				},
+				{
+					"id": "play",
+					"objectClass": "Audio",
+					"sid": 457173775471107,
+					"parameters": {
+						"audio-file": "robot_boss_die",
+						"loop": "not-looping",
+						"volume": "-10",
+						"tag-optional": "\"\""
+					}
+				}
+			],
+			"sid": 855028595755552
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "ReplayButton",
+					"sid": 434553174033907
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 142689557734113,
+					"parameters": {
+						"variable": "TripleShot",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 622970270613843,
+					"parameters": {
+						"variable": "KilledCount",
+						"value": "0"
+					}
+				},
+				{
+					"id": "set-eventvar-value",
+					"objectClass": "System",
+					"sid": 888753277716368,
+					"parameters": {
+						"variable": "Level",
+						"value": "1"
+					}
+				},
+				{
+					"id": "restart-layout",
+					"objectClass": "System",
+					"sid": 175665999649361
+				}
+			],
+			"sid": 962494426628996
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 626529162013535,
+					"parameters": {
+						"variable": "IsSelectingLevel"
+					}
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "ContinueBouton",
+					"sid": 665301762985220,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "TripleShotButton",
+					"sid": 241942555467587,
+					"parameters": {
+						"visibility": "visible"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 934948522038819,
+					"parameters": {
+						"time-scale": "0"
+					}
+				}
+			],
+			"sid": 623094292583703
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "compare-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 165316467813612,
+					"parameters": {
+						"variable": "IsSelectingLevel"
+					},
+					"isInverted": true
+				}
+			],
+			"actions": [
+				{
+					"id": "set-visible",
+					"objectClass": "ContinueBouton",
+					"sid": 118557134784669,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-visible",
+					"objectClass": "TripleShotButton",
+					"sid": 699777000777707,
+					"parameters": {
+						"visibility": "invisible"
+					}
+				},
+				{
+					"id": "set-time-scale",
+					"objectClass": "System",
+					"sid": 503383447225814,
+					"parameters": {
+						"time-scale": "1.0"
+					}
+				}
+			],
+			"sid": 488365304506145
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "TripleShotButton",
+					"sid": 609121727267910
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 663279080284326,
+					"parameters": {
+						"variable": "IsSelectingLevel",
+						"value": "false"
+					}
+				},
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 138141348525699,
+					"parameters": {
+						"variable": "TripleShot",
+						"value": "true"
+					}
+				}
+			],
+			"sid": 660903807715508
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "on-clicked",
+					"objectClass": "ContinueBouton",
+					"sid": 544033166977950
+				}
+			],
+			"actions": [
+				{
+					"id": "set-boolean-eventvar",
+					"objectClass": "System",
+					"sid": 760035049060633,
+					"parameters": {
+						"variable": "IsSelectingLevel",
+						"value": "false"
+					}
+				}
+			],
+			"sid": 667808268955027
+		}
+	],
+	"sid": 809465240407469
+}

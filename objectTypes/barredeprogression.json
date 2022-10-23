@@ -1,0 +1,21 @@
+{
+	"name": "BarreDeProgression",
+	"plugin-id": "progressbar",
+	"sid": 246462349046337,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "Experience",
+			"type": "number",
+			"desc": "",
+			"sid": 563651598050256
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Ancre",
+			"sid": 483049989494199
+		}
+	]
+}

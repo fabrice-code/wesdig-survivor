@@ -1,0 +1,69 @@
+{
+	"name": "BulletRight",
+	"plugin-id": "Sprite",
+	"sid": 286413817379511,
+	"isGlobal": false,
+	"instanceVariables": [
+		{
+			"name": "AngleShot",
+			"type": "number",
+			"desc": "",
+			"sid": 136196123831943
+		}
+	],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Bullet",
+			"name": "Projectile",
+			"sid": 561998716799863
+		},
+		{
+			"behaviorId": "destroy",
+			"name": "DétruireHorsDeLaScène",
+			"sid": 869201009703530
+		}
+	],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 48,
+						"height": 48,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 6019602,
+						"collisionPoly": {
+							"points": [
+								0.75,
+								0.25,
+								1,
+								0.5078125,
+								0.7421875,
+								0.7421875,
+								0.015625,
+								0.6640625,
+								0.0234375,
+								0.328125
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 940835090275719,
+				"name": "Animation 1",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

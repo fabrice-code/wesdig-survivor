@@ -1,0 +1,15 @@
+{
+	"name": "LevelText",
+	"plugin-id": "Text",
+	"sid": 589658262404159,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [
+		{
+			"behaviorId": "Anchor",
+			"name": "Ancre",
+			"sid": 733129306250198
+		}
+	],
+	"effectTypes": []
+}
