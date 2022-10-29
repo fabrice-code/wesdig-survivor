@@ -1,0 +1,100 @@
+{
+	"name": "PlaySprite",
+	"plugin-id": "Sprite",
+	"sid": 401875461388674,
+	"isGlobal": false,
+	"instanceVariables": [],
+	"behaviorTypes": [],
+	"effectTypes": [],
+	"animations": {
+		"items": [
+			{
+				"frames": [
+					{
+						"width": 190,
+						"height": 49,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 3128683,
+						"collisionPoly": {
+							"points": [
+								0.005263157894736842,
+								0.02040816326530612,
+								0.5,
+								0,
+								0.9894736842105263,
+								0.02040816326530612,
+								0.9947368421052631,
+								0.5,
+								0.9894736842105263,
+								0.9591836734693877,
+								0.5,
+								0.9795918367346939,
+								0.005263157894736842,
+								0.9591836734693877,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 350500535185682,
+				"name": "Normal",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			},
+			{
+				"frames": [
+					{
+						"width": 190,
+						"height": 45,
+						"originX": 0.5,
+						"originY": 0.5,
+						"originalSource": "",
+						"exportFormat": "lossless",
+						"exportQuality": 0.8,
+						"imageSpriteId": 8092728,
+						"collisionPoly": {
+							"points": [
+								0.005263157894736842,
+								0.022222222222222223,
+								0.5,
+								0,
+								0.9894736842105263,
+								0.022222222222222223,
+								0.9947368421052631,
+								0.5,
+								0.9894736842105263,
+								0.9555555555555556,
+								0.5,
+								0.9777777777777777,
+								0.005263157894736842,
+								0.9555555555555556,
+								0,
+								0.5
+							]
+						},
+						"useCollisionPoly": true,
+						"duration": 1
+					}
+				],
+				"sid": 326330471807226,
+				"name": "Hover",
+				"isLooping": false,
+				"isPingPong": false,
+				"repeatCount": 1,
+				"repeatTo": 0,
+				"speed": 5
+			}
+		],
+		"subfolders": []
+	}
+}

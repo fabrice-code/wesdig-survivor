@@ -7,35 +7,6 @@
 			"subLayers": [],
 			"instances": [
 				{
-					"type": "Sprite6",
-					"properties": {
-						"initially-visible": true,
-						"initial-animation": "Animation 1",
-						"initial-frame": 0,
-						"enable-collisions": true,
-						"live-preview": false
-					},
-					"uid": 31,
-					"instanceVariables": {},
-					"behaviors": {},
-					"world": {
-						"x": 182.5,
-						"y": 160,
-						"width": 403,
-						"height": 376,
-						"originX": 0.5,
-						"originY": 0.5,
-						"color": [
-							1,
-							1,
-							1,
-							1
-						],
-						"angle": 0,
-						"zElevation": 0
-					}
-				},
-				{
 					"type": "Sprite8",
 					"properties": {
 						"initially-visible": true,
@@ -48,10 +19,10 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 435,
-						"y": 245,
-						"width": 1099,
-						"height": 743,
+						"x": 447.5,
+						"y": 243,
+						"width": 970,
+						"height": 553,
 						"originX": 0.5,
 						"originY": 0.5,
 						"color": [
@@ -65,26 +36,35 @@
 					}
 				},
 				{
-					"type": "Bouton",
+					"type": "Texte3",
 					"properties": {
-						"type": "button",
-						"text": "Play",
-						"tooltip": "",
+						"text": "Wesdig Survivor",
+						"enable-bbcode": true,
+						"font": "fantasy",
+						"size": 26,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							0.6039215686274509,
+							0.4627450980392157,
+							0.1568627450980392,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
 						"initially-visible": true,
-						"enabled": true,
-						"auto-font-size": true,
-						"checked": false,
-						"id": "",
-						"class": ""
+						"origin": "top-left"
 					},
 					"uid": 33,
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 410.88504883546204,
-						"y": 296.2764838467317,
-						"width": 72,
-						"height": 24,
+						"x": 296.13497288407166,
+						"y": 26.757428077647532,
+						"width": 302.67968945654934,
+						"height": 58.800400701227225,
 						"originX": 0,
 						"originY": 0,
 						"color": [
@@ -92,7 +72,9 @@
 							1,
 							1,
 							1
-						]
+						],
+						"angle": 0,
+						"zElevation": 0
 					}
 				},
 				{
@@ -108,8 +90,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 291.8804231016394,
-						"y": 205.12389874772654,
+						"x": 261.6304231016393,
+						"y": 414.3461209699502,
 						"width": 143.2640555524693,
 						"height": 143.2640555524693,
 						"originX": 0.5,
@@ -137,8 +119,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 331.4257380072109,
-						"y": 165.92299135639473,
+						"x": 301.1757380072108,
+						"y": 375.1452135786184,
 						"width": 143.2640555524693,
 						"height": 143.2640555524693,
 						"originX": 0.5,
@@ -166,8 +148,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 373.4994096877789,
-						"y": 200.48349746486284,
+						"x": 343.2494096877788,
+						"y": 409.70571968708646,
 						"width": 143.2640555524693,
 						"height": 143.2640555524693,
 						"originX": 0.5,
@@ -195,8 +177,8 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 484.69403323797604,
-						"y": 204.99134066586737,
+						"x": 446.0412554601981,
+						"y": 418.41495177697993,
 						"width": 32.089933447286484,
 						"height": 32.089933447286484,
 						"originX": 0.5,
@@ -224,12 +206,125 @@
 					"instanceVariables": {},
 					"behaviors": {},
 					"world": {
-						"x": 604.4409701935579,
-						"y": 156.71528538060778,
+						"x": 548.9826368602244,
+						"y": 390.3055631583872,
 						"width": 138.36807029001352,
 						"height": 134.5113601744704,
 						"originX": 0.5,
 						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "PlaySprite",
+					"properties": {
+						"initially-visible": true,
+						"initial-animation": "Normal",
+						"initial-frame": 0,
+						"enable-collisions": true,
+						"live-preview": false
+					},
+					"uid": 39,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 447.2234785310097,
+						"y": 210.09595428623493,
+						"width": 190,
+						"height": 49,
+						"originX": 0.5,
+						"originY": 0.5,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Texte",
+					"properties": {
+						"text": "Play",
+						"enable-bbcode": true,
+						"font": "monospace",
+						"size": 12,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 40,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 374.505156895411,
+						"y": 194.93055984222275,
+						"width": 146.7249504815244,
+						"height": 30,
+						"originX": 0,
+						"originY": 0,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"angle": 0,
+						"zElevation": 0
+					}
+				},
+				{
+					"type": "Texte2",
+					"properties": {
+						"text": "Wesdig Survivor",
+						"enable-bbcode": true,
+						"font": "fantasy",
+						"size": 26,
+						"line-height": 0,
+						"bold": false,
+						"italic": false,
+						"color": [
+							1,
+							1,
+							1,
+							1
+						],
+						"horizontal-alignment": "center",
+						"vertical-alignment": "center",
+						"wrapping": "word",
+						"initially-visible": true,
+						"origin": "top-left"
+					},
+					"uid": 31,
+					"instanceVariables": {},
+					"behaviors": {},
+					"world": {
+						"x": 296.036904491541,
+						"y": 24.902467215467873,
+						"width": 302.67968945654934,
+						"height": 58.800400701227225,
+						"originX": 0,
+						"originY": 0,
 						"color": [
 							1,
 							1,

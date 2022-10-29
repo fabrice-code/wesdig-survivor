@@ -5,22 +5,93 @@
 			"eventType": "block",
 			"conditions": [
 				{
-					"id": "on-clicked",
-					"objectClass": "Bouton",
-					"sid": 974893256994144
+					"id": "cursor-is-over-object",
+					"objectClass": "Souris",
+					"sid": 557335554059132,
+					"parameters": {
+						"object": "PlaySprite"
+					}
+				}
+			],
+			"actions": [],
+			"sid": 248161973926972,
+			"children": [
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "on-button-released",
+							"objectClass": "Souris",
+							"sid": 219380057371841,
+							"parameters": {
+								"mouse-button": "left"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "go-to-layout",
+							"objectClass": "System",
+							"sid": 851945955017475,
+							"parameters": {
+								"layout": "Level1"
+							}
+						}
+					],
+					"sid": 536550726280186
+				},
+				{
+					"eventType": "block",
+					"conditions": [
+						{
+							"id": "mouse-button-is-down",
+							"objectClass": "Souris",
+							"sid": 654031446558570,
+							"parameters": {
+								"mouse-button": "left"
+							}
+						}
+					],
+					"actions": [
+						{
+							"id": "set-animation",
+							"objectClass": "PlaySprite",
+							"sid": 616350615139237,
+							"parameters": {
+								"animation": "\"Hover\"",
+								"from": "beginning"
+							}
+						}
+					],
+					"sid": 683591530193923
+				}
+			]
+		},
+		{
+			"eventType": "block",
+			"conditions": [
+				{
+					"id": "cursor-is-over-object",
+					"objectClass": "Souris",
+					"sid": 826836089710989,
+					"parameters": {
+						"object": "PlaySprite"
+					},
+					"isInverted": true
 				}
 			],
 			"actions": [
 				{
-					"id": "go-to-layout",
-					"objectClass": "System",
-					"sid": 130720676456456,
+					"id": "set-animation",
+					"objectClass": "PlaySprite",
+					"sid": 866446369308080,
 					"parameters": {
-						"layout": "Level1"
+						"animation": "\"Normal\"",
+						"from": "beginning"
 					}
 				}
 			],
-			"sid": 105075388596382
+			"sid": 631105333860323
 		}
 	],
 	"sid": 258350614719648

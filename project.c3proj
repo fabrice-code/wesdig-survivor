@@ -16,8 +16,8 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Keyboard",
-			"name": "Clavier",
+			"id": "Text",
+			"name": "Texte",
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false
@@ -32,14 +32,6 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Mouse",
-			"name": "Souris",
-			"author": "Scirra",
-			"version": "r308.2",
-			"bundled": false
-		},
-		{
-			"type": "plugin",
 			"id": "progressbar",
 			"name": "Barre de progression",
 			"author": "Scirra",
@@ -48,16 +40,24 @@
 		},
 		{
 			"type": "plugin",
-			"id": "Text",
-			"name": "Texte",
+			"id": "Button",
+			"name": "Bouton",
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false
 		},
 		{
 			"type": "plugin",
-			"id": "Button",
-			"name": "Bouton",
+			"id": "Keyboard",
+			"name": "Clavier",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "plugin",
+			"id": "Mouse",
+			"name": "Souris",
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false
@@ -74,6 +74,38 @@
 			"type": "plugin",
 			"id": "Camera3D",
 			"name": "Caméra 3D",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Anchor",
+			"name": "Ancre",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Bullet",
+			"name": "Projectile",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "destroy",
+			"name": "Détruire hors de la scène",
+			"author": "Scirra",
+			"version": "r308.2",
+			"bundled": false
+		},
+		{
+			"type": "behavior",
+			"id": "Fade",
+			"name": "Fondu",
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false
@@ -104,40 +136,8 @@
 		},
 		{
 			"type": "behavior",
-			"id": "Bullet",
-			"name": "Projectile",
-			"author": "Scirra",
-			"version": "r308.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "destroy",
-			"name": "Détruire hors de la scène",
-			"author": "Scirra",
-			"version": "r308.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Anchor",
-			"name": "Ancre",
-			"author": "Scirra",
-			"version": "r308.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
 			"id": "Timer",
 			"name": "Minuteur",
-			"author": "Scirra",
-			"version": "r308.2",
-			"bundled": false
-		},
-		{
-			"type": "behavior",
-			"id": "Fade",
-			"name": "Fondu",
 			"author": "Scirra",
 			"version": "r308.2",
 			"bundled": false
@@ -154,44 +154,61 @@
 	"uniqueId": "4akisn7f03k",
 	"objectTypes": {
 		"items": [
-			"PlayerSprite",
 			"Clavier",
-			"ArrièreplanRépété",
-			"ZombieEnemySprite",
-			"BulletNormal",
 			"Souris",
-			"BarreDeProgression",
-			"LevelText",
-			"TimerText",
-			"ReplayButton",
-			"GameOverText",
-			"GameOverShadow",
-			"KilledText",
-			"Sprite5",
-			"Sprite7",
-			"Sprite4",
-			"BulletLeft",
-			"BulletRight",
-			"TripleShotButton",
-			"ContinueBouton",
-			"Sprite",
-			"Sprite3",
-			"ZombieBossEnemySprite",
 			"Audio",
-			"RobotEnemySprite",
-			"VictoryText",
-			"VictoryScoreText",
-			"Sprite2",
 			"Caméra3D",
-			"Sprite6",
-			"Sprite8",
-			"Bouton",
-			"Sprite9",
-			"Sprite10",
-			"Sprite11",
-			"Sprite12"
+			"Texte2",
+			"Texte3",
+			"Sprite6"
 		],
-		"subfolders": []
+		"subfolders": [
+			{
+				"items": [
+					"Sprite8",
+					"Sprite10",
+					"Sprite11",
+					"Sprite12",
+					"PlaySprite",
+					"Sprite9",
+					"Texte"
+				],
+				"subfolders": [],
+				"name": "MainMenu"
+			},
+			{
+				"items": [
+					"ArrièreplanRépété",
+					"BarreDeProgression",
+					"Bouton",
+					"BulletLeft",
+					"BulletNormal",
+					"BulletRight",
+					"ContinueBouton",
+					"GameOverShadow",
+					"GameOverText",
+					"KilledText",
+					"LevelText",
+					"PlayerSprite",
+					"ReplayButton",
+					"RobotEnemySprite",
+					"Sprite4",
+					"Sprite5",
+					"Sprite7",
+					"TimerText",
+					"TripleShotButton",
+					"VictoryScoreText",
+					"VictoryText",
+					"ZombieBossEnemySprite",
+					"ZombieEnemySprite",
+					"Sprite",
+					"Sprite2",
+					"Sprite3"
+				],
+				"subfolders": [],
+				"name": "Level"
+			}
+		]
 	},
 	"autosaveData": null,
 	"containers": [],
@@ -396,5 +413,5 @@
 	},
 	"viewportWidth": 896,
 	"viewportHeight": 480,
-	"firstLayout": null
+	"firstLayout": "MainMenu"
 }
